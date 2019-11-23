@@ -9,6 +9,7 @@
     <script defer src="/__/firebase/7.5.0/firebase-app.js"></script>
 
     <script src="functions/speech.js"></script>
+    <script src="functions/getSign.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.5.0/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.5.0/firebase-database.js"></script>
@@ -25,12 +26,12 @@
   <body>
 
     <h1 id=abc-header>Learn Sign Language!</h1>
-    <div id=voice-accuracy>-</div>
+    <label id=voice-accuracy>-</label>
     
     <img id="mic-img" onclick="record()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOHtFVJ-lgZ5QQuqfEMMF4qYCtXrmS6RnxD7GtXfNeXeZ5psp&s">
-    <label for="Speech Text" name='' id="speechText"></label>
-    <btn id=text-input-btn><img id="text-input-img"src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/108437/Cyrillic_T.png"></btn>
-    <btn id="random-word" onclick="generateWord()">Random Word</btn>
+    
+    <btn id="random-word" onclick="generateWord()">Random Word</btn>    
+    <btn id=text-input-btn><img id="text-input-img" alt="letterimage" src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/108437/Cyrillic_T.png"></btn>
     <img id="word-img" src="">
 
     <div id="letter-list">
