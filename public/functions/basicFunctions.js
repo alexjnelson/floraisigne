@@ -11,8 +11,17 @@ function generateWord(scrambled = false){
 	}
 
 	for (letter of letters){
-		letterElements.push(document.createElement("p"));
-		letterImgElements.push(document.createElement("img"));
+		let el = document.createElement("p");
+		let imEl = document.createElement("img");
+
+		el.id = letter;
+		imEl.id = letter + "im";
+		imEl.src=getSign(letter);
+
+		letterElements.push(el);
+		letterImgElements.push(imEl);
+
+
 	}
 
 	
@@ -24,10 +33,6 @@ function dragSign(ev){
 }
 
 function dropSign(ev){
-
-}
-
-function getSign(ch){
 
 }
 
