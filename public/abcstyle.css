@@ -1,0 +1,26 @@
+* {
+    background-color: #bbd6ff;
+    font-family: Optima;
+}
+
+.container {
+
+}
+
+#mic-btn {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transition: .5s ease;
+  top: 50%;
+  bottom: 50%;
+}
+
+#text-input-btn {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition: .5s ease;
+    top: 70%;
+    bottom: 30%;
+}
