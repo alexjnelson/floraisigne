@@ -9,11 +9,9 @@ function record() {
         
         var wordrecognized = event.results[0][0].transcript.split(" ")[0].charAt(0);
         
-        //generateWord(word=wordrecognized);
+        generateWord(word=wordrecognized);
         
-        var letterURL = getSign(wordrecognized);
-        var imageToBeChanged = document.getElementById("text-input-img");
-        imageToBeChanged.src = letterURL;
+        
         
         var accuracy = document.getElementById('voice-accuracy');
         accuracy.innerHTML = "Accuracy of pronunciation: " + event.results[0][0].confidence.toFixed(2)*100 + '%';
