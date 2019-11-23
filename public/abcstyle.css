@@ -12,8 +12,10 @@
   height: 100px;
   position: absolute;
   transition: .5s ease;
-  top: 50%;
-  bottom: 50%;
+  top: 10%;
+  bottom: 90%;
+  left: 2%;
+
 }
 
 #text-input-btn {
@@ -21,6 +23,11 @@
     height: 100px;
     position: absolute;
     transition: .5s ease;
-    top: 70%;
-    bottom: 30%;
+    top: 27%;
+    bottom: 85%;
+    left: 2%;
+}
+
+#word-img {
+    
 }
