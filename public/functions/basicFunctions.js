@@ -5,9 +5,16 @@ const randomWords = ["ant", "fish","pie","bat","frog","seal","bear","goat","ship
 		"lion","dog","map","tree","duck","nest","truck"];
 var letterElements = [], letterImgElements = [];
 
-function generateWord(scrambled = false){
+function generateWord(scrambled = false, word = ""){
 	let i = Math.floor(Math.random()*randomWords.length);
-	let word = randomWords[i];
+
+	if (word === "") {
+		word = randomWords[i];
+	}
+	else{
+
+	}
+
 
 	console.log(word);
 
