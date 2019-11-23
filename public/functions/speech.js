@@ -4,7 +4,7 @@ function record() {
 
     recognition.onresult = function(event) {
         console.log(event); 
-        document.getElementById('speechToText').value = event.results[0][0].transcript;
+        document.getElementById('speechText').value = event.results[0][0].transcript.split()[0];
     }
 
     recognition.start();
