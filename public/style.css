@@ -1,29 +1,36 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Optima;
+    background-color: #bbd6ff;
 }
 
 .container {
     width: 100%;
     height: 100vh;
     background: #bbd6ff;
+    text-align:center;
+
 
 }
 
 #logos {
     display: flex;
     justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+
 }
 
 
 
 .main-button {
     color: white;
-    display: flex;
+    width: 500px;
+    display: inline-block;
     justify-content: center;
     margin: 20px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -34,5 +41,5 @@
 
 .main-button span {
     display: block;
-    padding: 8px 22px;
+    padding: 8px 20px;
 }
