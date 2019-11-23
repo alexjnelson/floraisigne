@@ -14,6 +14,9 @@
     <script defer src="/__/firebase/7.5.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <script src="functions/basicFunctions.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
 
@@ -23,7 +26,7 @@
     <div id=voice-accuracy>-</div>
     <btn id="mic-btn"><img id="mic-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOHtFVJ-lgZ5QQuqfEMMF4qYCtXrmS6RnxD7GtXfNeXeZ5psp&s"></btn>
     <btn id=text-input-btn><img id="text-input-img"src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/108437/Cyrillic_T.png"></btn>
-    <btn id="random-word" onclick="generateWord()"></btn>
+    <btn id="random-word" onclick="generateWord()">Random Word</btn>
     <img id="word-img" src="">
 
     <div id="letter-list">
