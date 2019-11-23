@@ -1,5 +1,5 @@
 
 function getSign(letter) {
     
-    return `images/${letter}.png`;
+    return `/images/${letter}_T.png`;
 }
