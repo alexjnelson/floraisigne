@@ -12,9 +12,9 @@
   height: 100px;
   position: absolute;
   transition: .5s ease;
-  top: 10%;
+  top: 18%;
   bottom: 90%;
-  left: 2%;
+  left: 4%;
 
 }
 
@@ -23,11 +23,80 @@
     height: 100px;
     position: absolute;
     transition: .5s ease;
-    top: 27%;
+    top: 38%;
     bottom: 85%;
-    left: 2%;
+    left: 4%;
 }
 
 #word-img {
-    
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    transition: .5s ease;
+    top: 18%;
+    bottom: 90%;
+    left: 18%;
+
+}
+
+#voice-accuracy {
+    font-size: 90px;
+    position: absolute;
+    transition: .5s ease;
+    top: 1%;
+    bottom: 90%;
+    left: 27%;
+}
+
+#accuracy-word {
+    font-size: 12px;
+    position: absolute;
+    transition: .5s ease;
+    top: 13%;
+    bottom: 5%;
+    left: 31%
+}
+
+#next-word {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #000000;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+
+    position: absolute;
+    top: 85%;
+    left: 28%;
+}
+
+#next-word:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+#sign-box {
+    border: 1px solid white;
+    width: 650px;
+    height: 650px;
+    position: absolute;
+    transition: .5s ease;
+    left: 52%;
+    top: 4%
+}
+
+#back-home {
+    position: absolute;
+    transition: .5s ease;
+    top: 67%;
+    bottom: 30%;
+    left: 5.3%;
 }
