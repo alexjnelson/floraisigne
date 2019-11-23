@@ -7,6 +7,8 @@
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.5.0/firebase-app.js"></script>
+
+    <script src="functions/speech.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.5.0/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.5.0/firebase-database.js"></script>
@@ -21,7 +23,8 @@
 
     <h1 id=abc-header>Learn Sign Language!</h1>
     <div id=voice-accuracy>-</div>
-    <btn id="mic-btn"><img id="mic-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOHtFVJ-lgZ5QQuqfEMMF4qYCtXrmS6RnxD7GtXfNeXeZ5psp&s"></btn>
+    
+    <img id="mic-img" onclick="record()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOHtFVJ-lgZ5QQuqfEMMF4qYCtXrmS6RnxD7GtXfNeXeZ5psp&s">
     <btn id=text-input-btn><img id="text-input-img"src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/108437/Cyrillic_T.png"></btn>
     <img id="word-img" src="">
     <div id="letter-list">
@@ -30,6 +33,10 @@
     </div>
 
 
+
+    <label for='Speech Recognition'> Speech Recognition </label>
+    <input type="text" name='' id='speechToText'
+    placeholder='Say Something' onclick=record()>
     
   </body>
 </html>
