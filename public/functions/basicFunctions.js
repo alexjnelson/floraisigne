@@ -21,7 +21,6 @@ function generateWord(scrambled = false, word = ""){
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
 	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
 
-	//let letterWidth = parseInt(letterListElement.style.width) / word.length;
 	let letterWidth = (window.innerWidth*0.8) / word.length;
 	let letterHeight = 1.313 * letterWidth;
 
@@ -29,11 +28,20 @@ function generateWord(scrambled = false, word = ""){
 
 	while(letterElements.length !== 0){
 		letterElements.shift().remove();
-		letterImgElements.shift().remove();
+		/*letterImgElements.shift().remove();*/
 	}
 
 	for (letter of word){
-		let el = document.createElement("p");
+		let el = document.createElement("div");
+		let img = getSign(letter);
+		el.id = letter;
+
+		el.setAttribute("style", `display:inline-flex;height:${letterHeight*0.9};width:${letterWidth};`);
+		el.setAttribute("style", `background-image:url("${img}")`);
+
+		letterElements.push(el);
+
+/*		let el = document.createElement("p");
 		let imEl = document.createElement("img");
 
 		el.id = letter;
@@ -57,7 +65,7 @@ function generateWord(scrambled = false, word = ""){
 		console.log(imEl);
 
 		letterElements.push(el);
-		letterImgElements.push(imEl);
+		letterImgElements.push(imEl);*/
 	}
 
 	console.log(letterElements);
@@ -65,9 +73,8 @@ function generateWord(scrambled = false, word = ""){
 	if (scrambled) shuffle(letterImgElements);
 
 	for (let i = 0 ; i < word.length ; i++){
-		letterElements[i]
 		letterListElement.appendChild(letterElements[i]);
-		letterImgListElement.appendChild(letterImgElements[i]);
+		//letterImgListElement.appendChild(letterImgElements[i]);
 	}
 
 }
