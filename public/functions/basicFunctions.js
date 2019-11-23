@@ -12,10 +12,18 @@ function generateWord(scrambled = false){
 	console.log(word);
 
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
+	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
 
 	//let letterWidth = parseInt(letterListElement.style.width) / word.length;
-	let letterWidth = (window.innerWidth*0.85) / word.length;
+	let letterWidth = (window.innerWidth*0.8) / word.length;
 	let letterHeight = 1.313 * letterWidth;
+
+	console.log(letterWidth);
+
+	while(letterElements.length !== 0){
+		letterElements.shift().remove();
+		letterImgElements.shift().remove();
+	}
 
 	for (letter of word){
 		let el = document.createElement("p");
@@ -24,19 +32,22 @@ function generateWord(scrambled = false){
 		el.id = letter;
 		el.innerHTML = letter;
 		imEl.id = letter + "im";
-		//imEl.src=getSign(letter);
-		imEl.src="https://assets.atlasobscura.com/media/W1siZiIsInVwbG9hZHMvdGhpbmdfaW1hZ2VzL2UxNzBjMWNjLWUwNzMtNDJjOC1hOTUyLThhMzEwZDZkMGFjYmY0ZWI5ZGJhMWI1YzNiYjJhMl9QZWFudXRzYW5kQ29rZV9TYW1PQnJpZW4uanBnIl0sWyJwIiwiY29udmVydCIsIiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA4MSAtYXV0by1vcmllbnQiXSxbInAiLCJ0aHVtYiIsIjU4MHg1ODAjIl1d/PeanutsandCoke_SamOBrien.jpg";
+		imEl.src = getSign(letter);
 
-		/*el.style.height = letterHeight*0.1;
+
+		el.setAttribute("style", `left:${letterWidth/2 + (letterWidth*word.indexOf(letter))};display:inline-flex;height:${letterHeight*0.1};width:${letterWidth};fontSize:75px`);
+		imEl.setAttribute("style", `display:inline-flex;height:${letterHeight*0.9};width:${letterWidth};`);
+
+		el.style.height = letterHeight*0.1;
 		el.style.width = letterWidth;
+		el.style.fontSize = "75px";
 
+		el.style.left = letterWidth/2 + (letterWidth*word.indexOf(letter));
+	
 		imEl.style.height = letterHeight*0.9;
-		imEl.style.width = letterWidth;*/
+		imEl.style.width = letterWidth;
 
-		el.setAttribute("style", `display:block;height:${letterHeight*0.1};width:${letterWidth};`);
-		imEl.setAttribute("style", `display:block;height:${letterHeight*0.9};width:${letterWidth};`);
-
-		console.log(imEl.style.width);
+		console.log(imEl);
 
 		letterElements.push(el);
 		letterImgElements.push(imEl);
@@ -47,8 +58,9 @@ function generateWord(scrambled = false){
 	if (scrambled) shuffle(letterImgElements);
 
 	for (let i = 0 ; i < word.length ; i++){
-		letterListElement.appendChild(letterImgElements[i]);
+		letterElements[i]
 		letterListElement.appendChild(letterElements[i]);
+		letterImgListElement.appendChild(letterImgElements[i]);
 	}
 
 }
