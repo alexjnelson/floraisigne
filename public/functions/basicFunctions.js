@@ -7,9 +7,20 @@ var letterElements = [], letterImgElements = [];
 
 function generateWord(scrambled = false){
 	let i = Math.floor(Math.random()*randomWords.length);
+<<<<<<< Updated upstream
 	let word = randomWords[i];
+=======
+
+	if (word === "") {
+		word = randomWords[i];
+	}
 
 	console.log(word);
+
+	wordImg = document.getElementById(scrambled ? "skills-word-img" : "word-img");
+>>>>>>> Stashed changes
+
+	wordImg.src = JSON.parse(search(word)).items[0].link;
 
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
 	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
@@ -83,4 +94,16 @@ function dragSign(ev){
 
 function dropSign(ev){
 
+}
+
+function search(word)
+{	
+	var key = "AIzaSyDJfvKrb8ui7Bu5KhpMDyTfalLv6POs614"
+	var id = "005443348412993502233:cklwqdwacj7"
+	theUrl = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${id}&q=${word}&searchType=image&fileType=jpg&imgSize=small&alt=json`
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }
