@@ -20,7 +20,7 @@
     <script defer src="/__/firebase/7.5.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <link href="abc.css" rel="stylesheet" type="text/css" /> 
+    <link href="skills.css" rel="stylesheet" type="text/css" /> 
 
 
   </head>   
@@ -51,14 +51,20 @@
         </div>
         <div id = "center">
             <div id="top">
-                <div id = "image"></div>
+                <div id="imagediv">
+                    <div id = "image"></div>
+                </div>
+                <div id="signbank">
+                    <!--add divs for each letter through js-->
+                </div>
             </div>
+
             <div id ="bot">
                 
                 <div id ="ASL">
                     <!--add divs for each letter through js-->
                 </div>
-                <div id ="nextword" onclick="generateWord()">
+                <div id ="nextword" onclick="generateScrambledWord()">
                     <p>next word</p>
                 </div>
             </div>
