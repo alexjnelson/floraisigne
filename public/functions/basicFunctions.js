@@ -70,7 +70,7 @@ function generateWord(scrambled = false, word = ""){
 		letter.innerHTML = word.charAt(i);
 		letter.style.position="absolute";
 		letter.style.width=letterWidth;
-		letter.style.top="59.9%";
+		letter.style.top="71%";
 		letter.style.textAlign="center";
 		letter.style.fontSize="30px";
 
