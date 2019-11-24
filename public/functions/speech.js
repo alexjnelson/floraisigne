@@ -7,7 +7,8 @@ function record() {
     recognition.onresult = function(event) {
         console.log(event); 
         
-        var wordrecognized = event.results[0][0].transcript.split(" ")[0].charAt(0);
+        var wordrecognized = event.results[0][0].transcript.split(" ")[0];
+        console.log(wordrecognized);
         
         generateWord(word=wordrecognized);
         
