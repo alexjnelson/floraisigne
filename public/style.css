@@ -24,7 +24,7 @@
 
 
 
-.main-button {
+#abc{
     color: white;
     width: 500px;
     display: inline-block;
@@ -37,19 +37,117 @@
     background-image: linear-gradient(#8da9ff, #8da9ff),radial-gradient(circle at center, #fdf8f8, #fdf8f8);
     background-origin: border-box;
     background-clip: content-box, border-box;
+
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 
-.main-button span {
+#abc span {
     display: block;
     padding: 8px 20px;
 }
 
+#abc:before {
 
-.main-button:hover {
-    background: #434343;
-    letter-spacing: 1px;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-    transition: all 0.4s ease 0s;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3c4293;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
 }
+#abc:hover, #abc:focus, #abc:active {
+    color: white;
+}
+#abc:hover:before, #abc:focus:before, #abc:active:before {
+
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+#test{
+    color: white;
+    width:500px;
+    display: inline-block;
+    justify-content: center;
+    margin: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#8da9ff, #8da9ff),radial-gradient(circle at center, #fdf8f8, #fdf8f8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#test span {
+    display: block;
+    padding: 8px 20px;
+}
+
+#test:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #3c4293;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+#test:hover, #test:focus, #test:active {
+    color: white;
+}
+#test:hover:before, #test:focus:before, #test:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
