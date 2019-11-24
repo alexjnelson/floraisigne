@@ -6,8 +6,6 @@ const randomWords = ["ant", "fish","pie","bat","frog","seal","bear","goat","ship
 var letterElements = [], letterImgElements = [], letterDivs = [];
 
 function generateWord(scrambled = false, word = ""){
-	let i = Math.floor(Math.random()*randomWords.length);
-
 	let oldWordImg = document.getElementById("wordImg");
 
 	if (oldWordImg !== null){
@@ -15,6 +13,7 @@ function generateWord(scrambled = false, word = ""){
 	}
 
 	if (word === "") {
+		let i = Math.floor(Math.random()*randomWords.length);
 		word = randomWords[i];
 	}
 
