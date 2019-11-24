@@ -29,7 +29,7 @@ function generateWord(word){
 	let wordImg = document.createElement("img");
 	let wordImgDiv = document.getElementById("image");
 	//let imgURL = JSON.parse(search(word)).items[0].link;
-	imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
+	let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
 
 	console.log(imgURL);
 	wordImg.src=imgURL;
@@ -92,8 +92,13 @@ function generateWord(word){
 
 function search(word)
 {	
-	var key = "AIzaSyDJfvKrb8ui7Bu5KhpMDyTfalLv6POs614"
-	var id = "005443348412993502233:cklwqdwacj7"
+	// main account keys
+	//var key = "AIzaSyDJfvKrb8ui7Bu5KhpMDyTfalLv6POs614"
+	//var id = "005443348412993502233:cklwqdwacj7"
+
+	// jack the hedgehog keys
+	var key = "AIzaSyB-V6W2o8C0WHg-BoePAwHl4aBROitnQN8"
+	var id = "009188198972347847553:yn8cif7d73p";
 	theUrl = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${id}&q=${word}&searchType=image&fileType=jpg&imgSize=small&alt=json`
 
     var xmlHttp = new XMLHttpRequest();
@@ -123,7 +128,7 @@ function generateScrambledWord(word){
 	let wordImg = document.createElement("img");
 	let wordImgDiv = document.getElementById("image");
 	//let imgURL = JSON.parse(search(word)).items[0].link;
-	imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
+	let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
 
 	console.log(imgURL);
 	wordImg.src=imgURL;
