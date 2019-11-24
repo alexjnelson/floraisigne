@@ -21,9 +21,6 @@ function generateWord(scrambled = false, word = ""){
 	console.log(imgURL);
 
 	wordImg.setAttribute("src", imgURL);
-	wordImg.src = JSON.parse(search(word)).items[0].link;
-
-	wordImg.setAttribute("src", imgURL);
 	wordImg.src=imgURL;
 
 	console.log(wordImg);
