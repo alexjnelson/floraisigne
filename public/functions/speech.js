@@ -22,7 +22,7 @@ function record() {
             closeFar.innerHTML = "Very good!";
         }
         else if (accuracy <= 0.90){
-            closeFar.innerHTML = "Excellent pronounciation!";
+            closeFar.innerHTML = "Excellent job!";
         }
         else{
             closeFar.innerHTML = "Perfect! Way to go!";
