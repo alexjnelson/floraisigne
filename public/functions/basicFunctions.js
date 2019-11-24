@@ -17,17 +17,22 @@ function generateWord(scrambled = false){
 
 	console.log(word);
 
+<<<<<<< Updated upstream
 	wordImg = document.getElementById(scrambled ? "skills-word-img" : "word-img");
+>>>>>>> Stashed changes
+=======
+	let wordImgDiv = document.getElementById("image");
+	let imgURL = JSON.parse(search(word)).items[0].link;
 >>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
 	wordImg.src = JSON.parse(search(word)).items[0].link;
 =======
 	console.log(imgURL);
+	wordImgDiv.style.backGroundImage=imgURL;
 
-	wordImg.setAttribute("src", imgURL);
-	wordImg.src=imgURL;
 
+<<<<<<< Updated upstream
 	console.log(wordImg);
 >>>>>>> Stashed changes
 
@@ -89,6 +94,34 @@ function generateWord(scrambled = false){
 		letterListElement.appendChild(letterElements[i]);
 		//letterImgListElement.appendChild(letterImgElements[i]);
 	}
+=======
+	let oldLetters = document.getElementsByClassName("letter");
+	for (let i = 0 ; i < oldLetters.length ; i++){
+		oldLetters[i].remove();
+	}
+
+	let padding = (100-word.length)/(word.length+1) + "px";
+	let asl = document.getElementById("ASL");
+
+	for (let i = 0 ; i < word.length ; i++){
+		let letterDiv = document.createElement("div");
+		letterDiv.id = "letter" + i;
+		letterDiv.class = "letter";
+		letterDiv.style.marginLeft = padding;
+
+		let signDiv = document.createElement("div");
+		signDiv.id = "sign" + i;
+		signDiv.class = "sign";
+		signDiv.style.backGroundImage(getSign(word.charAt(i)));
+
+		let letter = document.createElement("p");
+		p.innerHTML = word.charAt(i);
+
+		asl.appendChild(letterDiv);
+		letterDiv.appendChild(signDiv);
+		letterDiv.appendChild(letter);
+	} 
+>>>>>>> Stashed changes
 
 }
 
