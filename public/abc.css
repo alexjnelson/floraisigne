@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial,Arial, Helvetica, sans-serif;
-    background-color: red;
+    background-color: #8da9ff;
     
 }
 
@@ -19,17 +19,7 @@ div {
 
 }
 
-#mySidenav a {
-    position: absolute;
-    right: -80px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 5px 0 0 5px;
-  }
+
 
 
 #home {
@@ -120,7 +110,7 @@ div {
     position: relative;
     margin-top: 3.6%;
     border-radius: 20px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:6px 6px 15px #82a0bc;
 }
 
 #ASL {
@@ -130,12 +120,36 @@ div {
     margin-top: 3%;
     position: relative;
     border-radius:10px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:6px 6px 15px aqua;
     /*align-content: center;*/
 }
 
 #nextword:hover{
     cursor: pointer;
+}
+
+
+#mySidenav a {
+    position: absolute;
+    right: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    
+  }
+  
+  #mySidenav a:hover {
+    right: 0;
+  }
+  
+  #accuracyslider {
+    top: 20px;
+    background-color: #3c4293;
+    overflow: hidden;  
 }
 
 
