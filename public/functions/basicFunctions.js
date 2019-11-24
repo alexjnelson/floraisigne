@@ -20,7 +20,16 @@ function generateWord(scrambled = false){
 	wordImg = document.getElementById(scrambled ? "skills-word-img" : "word-img");
 >>>>>>> Stashed changes
 
+<<<<<<< Updated upstream
 	wordImg.src = JSON.parse(search(word)).items[0].link;
+=======
+	console.log(imgURL);
+
+	wordImg.setAttribute("src", imgURL);
+	wordImg.src=imgURL;
+
+	console.log(wordImg);
+>>>>>>> Stashed changes
 
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
 	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
