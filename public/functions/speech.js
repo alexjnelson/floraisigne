@@ -8,6 +8,7 @@ function record() {
         console.log(event); 
         
         var wordrecognized = event.results[0][0].transcript.split(" ")[0];
+
         
         generateWord(word=wordrecognized);
         

@@ -5,17 +5,17 @@ const randomWords = ["ant", "fish","pie","bat","frog","seal","bear","goat","ship
 		"lion","dog","map","tree","duck","nest","truck"];
 var letterElements = [], letterImgElements = [], letterDivs = [];
 
-function generateWord(scrambled = false, word = ""){
-	let i = Math.floor(Math.random()*randomWords.length);
-
+function generateWord(word){
 	let oldWordImg = document.getElementById("wordImg");
 
 	if (oldWordImg !== null){
 		oldWordImg.remove();
 	}
 
-	if (word === "") {
+	if (word === undefined) {
+		let i = Math.floor(Math.random()*randomWords.length);
 		word = randomWords[i];
+		console.log("REached");
 	}
 
 	console.log(word);
