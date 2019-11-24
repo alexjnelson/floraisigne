@@ -25,7 +25,7 @@ function record() {
             closeFar.innerHTML = "Excellent pronounciation!";
         }
         else{
-            closeFar.innerHTML("Perfect! Way to go!");
+            closeFar.innerHTML = "Perfect! Way to go!";
         }
 
     }
