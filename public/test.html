@@ -20,37 +20,28 @@
     <script defer src="/__/firebase/7.5.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <link href="abc.css" rel="stylesheet" type="text/css" /> 
+    <link href="test.css" rel="stylesheet" type="text/css" /> 
 
 
-  </head>   
+  </head>
 
 
   <body>
 
+
     <div id = "container">
         
         <div id = "left">
-
-            <div class="home" id="home">
-                <img id="home-logo" onclick="window.location.href='index.html'" src="images/homeicon.png" style="height: 100%; width: 100%;">
-            </div>
+            <p>Hello left side</p>
 
         </div>
         <div id = "right">
-            <div class="mic" id ="mic">
-                <img id="mic-logo" onclick="record()" src="images/microphone.png" style="height: 100%; width: 100%;">
-            </div>
-            <div id="mySidenav" class="sidenav">
-                <a href="#" id="about">About</a>
-                <a href="#" id="blog">Blog</a>
-                <a href="#" id="projects">Projects</a>
-                <a href="#" id="contact">Contact</a>
-              </div>
+                <p>Hello Right side.</p>
     
         </div>
         <div id = "center">
             <div id="top">
+                
                 <div id = "image"></div>
             </div>
             <div id ="bot">
@@ -62,7 +53,7 @@
                     </div>
                     <!--add divs for each letter through js-->
                 </div>
-                <div id ="nextword" onclick="generateWord()">
+                <div id ="nextword" onclick = "generateWord()">
                     <p>next word</p>
                 </div>
             </div>
