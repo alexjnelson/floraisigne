@@ -1,3 +1,11 @@
+function unclass(x) {
+
+
+    x.className = "";
+    x.className = '';
+
+}
+
 function record() {
     var recognition = new webkitSpeechRecognition();
     recognition.lang = 'en-US';
@@ -12,8 +20,7 @@ function record() {
         
         generateWord(word=wordrecognized);
         
-        var 
-    }
+
 
     recognition.start();
 }   
