@@ -21,8 +21,7 @@ p {
     margin-left: 25%;
     position: absolute;
     
-    border-width: 1px;
-    border-style: dashed;
+  
 }
 
 .home:hover {
@@ -31,6 +30,7 @@ p {
 
 .mic:hover{
     cursor: pointer;
+    box-shadow: 3px 3px 10x darkblue;
 }
 
 #mic {
@@ -39,28 +39,12 @@ p {
     padding-top: 5%;
     
     position: relative;
-}
-
-
-.accuracy {
-    background: rgba(167,204,237,1);
-    
-    box-shadow: 3px 3px 20px black;
-}
-
-.accuracynot {
-    background: rgba(167,204,237,0);
     
 }
 
-#percentage {
-    
-    position: absolute;
-    transform-origin: 0 0;
-    transform: rotate(90deg);
-    bottom: 0;
-   
-}
+
+
+
 
 
 #accuracy{
@@ -136,10 +120,11 @@ p {
     width: 80%;
     margin: auto;
     height:65%;
+    background-color: #a7cced;
     margin-top: 3%;
     position: relative;
     border-radius:10px;
-    box-shadow:6px 6px 15px aqua;
+    box-shadow:3px 3px 30px #82a0bc;
     /*align-content: center;*/
 }
 
@@ -152,12 +137,13 @@ p {
 #nextword {
     height:15%;
     width:25%;
+    background-color: #a7cced;
     margin: auto;
     margin-top: 2%;
         
     top: 80%;
     border-radius:10px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:3px 3px 30px #82a0bc;
 }
 
 #right {

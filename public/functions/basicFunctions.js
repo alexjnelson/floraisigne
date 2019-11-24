@@ -4,10 +4,6 @@ const randomWords = ["ant", "fish","pie","bat","frog","seal","bear","goat","ship
 		"gold","sky","car","hat","star","cat","lake","stop","cow","leaf","sun","day","night",
 		"lion","dog","map","tree","duck","nest","truck"];
 var letterElements = [], letterImgElements = [], letterDivs = [];
-<<<<<<< Updated upstream
-
-function generateWord(word){
-=======
 
 var signDivs;
 
@@ -110,7 +106,6 @@ function search(word)
 
 
 function generateScrambledWord(word){
->>>>>>> Stashed changes
 	let oldWordImg = document.getElementById("wordImg");
 
 	if (oldWordImg !== null){

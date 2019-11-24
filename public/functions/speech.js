@@ -1,11 +1,3 @@
-function unclass(x) {
-
-
-    x.className = "";
-    x.className = '';
-
-}
-
 function record() {
     var recognition = new webkitSpeechRecognition();
     recognition.lang = 'en-US';
@@ -20,14 +12,6 @@ function record() {
         
         generateWord(word=wordrecognized);
         
-        var accuracy = document.getElementById('accuracy');
-        
-        accuracy.className+=" accuracy";
-        accuracy.style.visibility = 'visible';
-
-        setTimeout(unclass(accuracy), 10000);
-
-
     }
 
     recognition.start();
