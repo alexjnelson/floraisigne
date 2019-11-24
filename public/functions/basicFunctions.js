@@ -8,43 +8,75 @@ var letterElements = [], letterImgElements = [], letterDivs = [];
 function generateWord(scrambled = false, word = ""){
 	let i = Math.floor(Math.random()*randomWords.length);
 
+	let oldWordImg = document.getElementById("wordImg");
+
+	if (oldWordImg !== null){
+		oldWordImg.remove();
+	}
+
 	if (word === "") {
 		word = randomWords[i];
 	}
 
 	console.log(word);
 
+	let wordImg = document.createElement("img");
 	let wordImgDiv = document.getElementById("image");
-	let imgURL = JSON.parse(search(word)).items[0].link;
+	//let imgURL = JSON.parse(search(word)).items[0].link;
+	imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
 
 	console.log(imgURL);
-	wordImgDiv.style.backGroundImage=imgURL;
+	wordImg.src=imgURL;
+
+	wordImg.style.height = "100%";
+	wordImg.style.width= "100%";
+	wordImg.style.borderRadius="20px";
+	wordImg.id = "wordImg";
+
+	wordImgDiv.appendChild(wordImg);	
 
 
-	let oldLetters = document.getElementsByClassName("letter");
-	for (let i = 0 ; i < oldLetters.length ; i++){
-		oldLetters[i].remove();
-	}
-
-	let padding = (100-word.length)/(word.length+1) + "px";
 	let asl = document.getElementById("ASL");
+	while (asl.firstChild) {
+    	asl.removeChild(asl.firstChild);
+  	}
+
+  	let letterWidth=(90/word.length);
+	let padding = (95-word.length*letterWidth)/(word.length+1);
+	letterWidth+="%";
+	console.log(padding);
 
 	for (let i = 0 ; i < word.length ; i++){
 		let letterDiv = document.createElement("div");
 		letterDiv.id = "letter" + i;
-		letterDiv.class = "letter";
-		letterDiv.style.marginLeft = padding;
+		letterDiv.style.marginLeft = i === 0 ? (padding*2.5) +"%" : padding + "%";
+		letterDiv.style.width=letterWidth;
+		letterDiv.style.height="65%";
+		letterDiv.style.display="inline-flex";
 
 		let signDiv = document.createElement("div");
 		signDiv.id = "sign" + i;
-		signDiv.class = "sign";
-		signDiv.style.backGroundImage(getSign(word.charAt(i)));
+		signDiv.style.width="100%";
+		signDiv.style.height="80%";
+		signDiv.style.position="relative";
 
-		let letter = document.createElement("p");
-		p.innerHTML = word.charAt(i);
+		let signImg = document.createElement("img");
+		signImg.src=getSign(word.charAt(i));
+		signImg.style.height="100%";
+		signImg.style.width="100%";
+
+		let letter = document.createElement("div");
+		letter.innerHTML = word.charAt(i);
+		letter.style.position="absolute";
+		letter.style.width=letterWidth;
+		letter.style.top="52.5%";
+		letter.style.textAlign="center";
+		letter.style.fontSize="30px";
+
 
 		asl.appendChild(letterDiv);
 		letterDiv.appendChild(signDiv);
+		signDiv.appendChild(signImg);
 		letterDiv.appendChild(letter);
 	} 
 
