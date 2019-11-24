@@ -7,6 +7,7 @@ var letterElements = [], letterImgElements = [], letterDivs = [];
 
 function generateWord(scrambled = false, word = ""){
 	let i = Math.floor(Math.random()*randomWords.length);
+	let word = randomWords[i];
 
 	if (word === "") {
 		word = randomWords[i];
@@ -20,6 +21,12 @@ function generateWord(scrambled = false, word = ""){
 	console.log(imgURL);
 
 	wordImg.setAttribute("src", imgURL);
+	wordImg.src = JSON.parse(search(word)).items[0].link;
+
+	wordImg.setAttribute("src", imgURL);
+	wordImg.src=imgURL;
+
+	console.log(wordImg);
 
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
 	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
