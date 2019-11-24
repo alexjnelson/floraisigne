@@ -120,7 +120,7 @@ function generateScrambledWord(word){
 	if (word === undefined) {
 		let i = Math.floor(Math.random()*randomWords.length);
 		word = randomWords[i];
-		console.log("Reached");
+		console.log("REached");
 	}
 
 	console.log(word);

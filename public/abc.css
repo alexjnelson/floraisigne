@@ -1,7 +1,8 @@
 
 body {
     font-family: Arial,Arial, Helvetica, sans-serif;
-    background-color: #bbd6ff;
+    background-color: #8da9ff;
+    
 }
 
 
@@ -10,6 +11,15 @@ p {
     font-size: 120%;
     text-align: center;
 }
+
+div {
+    border-width: 1px;
+    border-style: dashed;
+    border-color:white;
+
+}
+
+
 
 
 #home {
@@ -34,51 +44,17 @@ p {
 }
 
 #mic {
-    width: 100%;
-    height: 25%;
-    padding-top: 5%;
-    
+  
+    width: 50%;
+    height: 10%;
+    margin-top: 23%;
+    margin-left: 25%;
+    border-color: mediumblue;
     position: relative;
-}
-
-
-.accuracy {
-    background: rgba(167,204,237,1);
-    
-    box-shadow: 3px 3px 20px black;
-}
-
-.accuracynot {
-    background: rgba(167,204,237,0);
-    
-}
-
-#percentage {
-    
-    position: absolute;
-    transform-origin: 0 0;
-    transform: rotate(90deg);
-    bottom: 0;
    
+    border-width: 1px;
+    border-style: dashed;
 }
-
-
-#accuracy{
-    height:40%;
-    width:50%;
-    margin: auto;
-    margin-top: 21%;
-    text-align: center;
-    position: relative;
-    background-color: #a7cced;
-    background: rgba(167,204,237,0);
-    border-color: black;    
-    border-radius: 20px;
-    transition: 2s;
-    
-}
-
-
 
 #container {
     width: 97vw;
@@ -87,6 +63,11 @@ p {
     
 }
 
+#accuracyslider {
+    width:100%;
+    height: 10%;
+       
+}
 
 #left {
     width: 10%;
@@ -148,6 +129,30 @@ p {
 }
 
 
+#mySidenav a {
+    position: absolute;
+    right: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    
+  }
+  
+  #mySidenav a:hover {
+    right: 0;
+  }
+  
+  #accuracyslider {
+    top: 20px;
+    background-color: #3c4293;
+    overflow: hidden;  
+}
+
+
 
 #nextword {
     height:15%;
@@ -164,6 +169,5 @@ p {
     width:10%;
     height:100%;
     float: right;
-    overflow: hidden;
 }
 
