@@ -1,8 +1,6 @@
-
 body {
     font-family: Arial,Arial, Helvetica, sans-serif;
-    background-color: red;
-    
+    background-color: #bbd6ff;
 }
 
 
@@ -12,61 +10,29 @@ p {
     text-align: center;
 }
 
-div {
-    border-width: 1px;
-    border-style: dashed;
-    border-color:white;
-
-}
-
-#mySidenav a {
-    position: absolute;
-    right: -80px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 5px 0 0 5px;
-  }
-
 
 #home {
-    margin: auto;
 
+    margin: auto;
     width: 50%;
     height: 10%;
     margin-top: 23%;
     margin-left: 25%;
     position: absolute;
     
-    border-width: 1px;
-    border-style: dashed;
+  
 }
 
 .home:hover {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(10px) translateZ(0);
-  transform: perspective(10px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  cursor: pointer;
 }
 
-#mic {
-  
-    width: 50%;
-    height: 10%;
-    margin-top: 23%;
-    margin-left: 25%;
-    border-color: mediumblue;
-    position: relative;
-   
-    border-width: 1px;
-    border-style: dashed;
-}
+
+
+
+
+
+
 
 #container {
     width: 97vw;
@@ -75,11 +41,6 @@ div {
     
 }
 
-#accuracyslider {
-    width:100%;
-    height: 10%;
-       
-}
 
 #left {
     width: 10%;
@@ -105,7 +66,13 @@ div {
  
 }
 
-
+#bot {
+    width:100%;
+    height:60%;
+    top:40%;
+    position: absolute;
+    
+}
 #signbank {
     height:100%;
     width: 70%;
@@ -129,44 +96,76 @@ div {
     position: relative;
     margin-top: 10%;
     border-radius: 20px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:6px 6px 15px #82a0bc;
 }
 
-
-#bot {
-    width:100%;
-    height:60%;
-    top:40%;
-    position: relative;
-    
-}
 
 #ASL {
     width: 80%;
     margin: auto;
     height:65%;
+    background-color: #a7cced;
     margin-top: 3%;
     position: relative;
     border-radius:10px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:3px 3px 30px #82a0bc;
     /*align-content: center;*/
 }
 
+#nextword:hover{
+    cursor: pointer;
+}
+
+
 
 #nextword {
-    height:15%;
+    height:11%;
     width:25%;
+    background-color: #a7cced;
     margin: auto;
     margin-top: 2%;
-        
+    margin-left: 37%;
     top: 80%;
+
     border-radius:10px;
-    box-shadow:6px 6px 15px maroon;
+    box-shadow:3px 3px 30px #82a0bc;
+
 }
+
+
+.main-button {
+    text-align: center;
+
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #000000;
+    padding: 25px;
+    font-size: 35px;
+    border-radius: 10px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+
+
+.main-button:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    background-image: linear-gradient(#8da9ff, #8da9ff),radial-gradient(circle at center, #fdf8f8, #fdf8f8);
+}
+
 
 #right {
     width:10%;
     height:100%;
     float: right;
+    overflow: hidden;
 }
+
 

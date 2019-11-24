@@ -13,6 +13,7 @@ var held;
 
 function generateWord(word){
 
+	document.getElementById("closeFar").innerHTML = "";
 	let oldWordImg = document.getElementById("wordImg");
 	signDivs = [];
 
@@ -29,8 +30,8 @@ function generateWord(word){
 
 	let wordImg = document.createElement("img");
 	let wordImgDiv = document.getElementById("image");
-	//let imgURL = JSON.parse(search(word)).items[0].link;
-	let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
+	let imgURL = JSON.parse(search(word)).items[0].link;
+	//let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
 
 	console.log(imgURL);
 	wordImg.src=imgURL;
@@ -128,8 +129,8 @@ function generateScrambledWord(word){
 
 	let wordImg = document.createElement("img");
 	let wordImgDiv = document.getElementById("image");
-	//let imgURL = JSON.parse(search(word)).items[0].link;
-	let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
+	let imgURL = JSON.parse(search(word)).items[0].link;
+	//let imgURL = "https://img.cinemablend.com/filter:scale/quill/e/5/c/2/4/9/e5c2494b7fec13181defbc8afe66a7a3bee5bae0.jpg?fw=1200";
 
 	console.log(imgURL);
 	wordImg.src=imgURL;
