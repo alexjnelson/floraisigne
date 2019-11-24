@@ -15,8 +15,18 @@ function record() {
         var closeFar = document.getElementById("closeFar");
         generateWord(word=wordrecognized);
         
-        
-        closeFar.innerHTML = accuracy + "%"; 
+        if (accuracy <= 0.70){
+            closeFar.innerHTML = "Getting close! Keep practicing!";
+        }
+        else if (accuracy <= 0.80){
+            closeFar.innerHTML = "Very good!";
+        }
+        else if (accuracy <= 0.90){
+            closeFar.innerHTML = "Excellent pronounciation!";
+        }
+        else{
+            closeFar.innerHTML("Perfect! Way to go!");
+        }
 
     }
 
