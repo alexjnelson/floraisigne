@@ -7,7 +7,6 @@ var letterElements = [], letterImgElements = [], letterDivs = [];
 
 function generateWord(scrambled = false, word = ""){
 	let i = Math.floor(Math.random()*randomWords.length);
-	word = randomWords[i];
 
 	if (word === "") {
 		word = randomWords[i];
