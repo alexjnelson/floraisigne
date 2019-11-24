@@ -46,13 +46,11 @@ div {
 }
 
 .home:hover {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(10px) translateZ(0);
-  transform: perspective(10px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.mic:hover{
+    cursor: pointer;
 }
 
 #mic {
@@ -135,6 +133,11 @@ div {
     box-shadow:6px 6px 15px maroon;
     /*align-content: center;*/
 }
+
+#nextword:hover{
+    cursor: pointer;
+}
+
 
 
 #nextword {
