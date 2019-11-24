@@ -3,7 +3,7 @@
 const randomWords = ["ant", "fish","pie","bat","frog","seal","bear","goat","ship","bus",
 		"gold","sky","car","hat","star","cat","lake","stop","cow","leaf","sun","day","night",
 		"lion","dog","map","tree","duck","nest","truck"];
-var letterElements = [], letterImgElements = [];
+var letterElements = [], letterImgElements = [], letterDivs = [];
 
 function generateWord(scrambled = false, word = ""){
 	let i = Math.floor(Math.random()*randomWords.length);
@@ -11,12 +11,15 @@ function generateWord(scrambled = false, word = ""){
 	if (word === "") {
 		word = randomWords[i];
 	}
-	else{
-
-	}
-
 
 	console.log(word);
+
+	let wordImg = document.getElementById(scrambled ? "skills-word-img" : "word-img");
+	let imgURL = JSON.parse(search(word)).items[0].link;
+
+	console.log(imgURL);
+
+	wordImg.setAttribute("src", imgURL);
 
 	let letterListElement = document.getElementById(scrambled ? "skills-letter-list" : "letter-list");
 	let letterImgListElement = document.getElementById(scrambled ? "skills-letter-img-list" : "letter-img-list");
@@ -26,20 +29,20 @@ function generateWord(scrambled = false, word = ""){
 
 	console.log(letterWidth);
 
-	while(letterElements.length !== 0){
-		letterElements.shift().remove();
+	while(letterDivs.length !== 0){
+		letterDivs.shift().remove();
 		/*letterImgElements.shift().remove();*/
 	}
 
 	for (letter of word){
-		let el = document.createElement("div");
+		let div = document.createElement("div");
 		let img = getSign(letter);
-		el.id = letter;
+		div.id = letter;
 
-		el.setAttribute("style", `display:inline-flex;height:${letterHeight*0.9};width:${letterWidth};`);
-		el.setAttribute("style", `background-image:url("${img}")`);
+		div.setAttribute("style", `display:inline-flex;height:${letterHeight*0.9};width:${letterWidth};`);
+		div.setAttribute("style", `background-image:url("${img}")`);
 
-		letterElements.push(el);
+		letterDivs.push(div);
 
 /*		let el = document.createElement("p");
 		let imEl = document.createElement("img");
@@ -68,12 +71,12 @@ function generateWord(scrambled = false, word = ""){
 		letterImgElements.push(imEl);*/
 	}
 
-	console.log(letterElements);
+	console.log(letterDivs);
 
 	if (scrambled) shuffle(letterImgElements);
 
 	for (let i = 0 ; i < word.length ; i++){
-		letterListElement.appendChild(letterElements[i]);
+		letterListElement.appendChild(letterDivs[i]);
 		//letterImgListElement.appendChild(letterImgElements[i]);
 	}
 
@@ -90,4 +93,16 @@ function dragSign(ev){
 
 function dropSign(ev){
 
+}
+
+function search(word)
+{	
+	var key = "AIzaSyDJfvKrb8ui7Bu5KhpMDyTfalLv6POs614"
+	var id = "005443348412993502233:cklwqdwacj7"
+	theUrl = `https://www.googleapis.com/customsearch/v1?key=${key}&cx=${id}&q=${word}&searchType=image&fileType=jpg&imgSize=small&alt=json`
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }
