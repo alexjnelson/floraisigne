@@ -53,7 +53,7 @@ function generateWord(scrambled = false, word = ""){
 		letterDiv.style.width=letterWidth;
 		letterDiv.style.height="65%";
 		letterDiv.style.display="inline-flex";
-		letterDiv.style.marginTop="7.4%";
+		letterDiv.style.marginTop="4%";
 
 		let signDiv = document.createElement("div");
 		signDiv.id = "sign" + i;
@@ -70,7 +70,7 @@ function generateWord(scrambled = false, word = ""){
 		letter.innerHTML = word.charAt(i);
 		letter.style.position="absolute";
 		letter.style.width=letterWidth;
-		letter.style.top="71%";
+		letter.style.top="67%";
 		letter.style.textAlign="center";
 		letter.style.fontSize="30px";
 
