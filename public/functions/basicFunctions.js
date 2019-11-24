@@ -12,6 +12,7 @@ var newP;
 var held;
 
 function generateWord(word){
+
 	let oldWordImg = document.getElementById("wordImg");
 	signDivs = [];
 

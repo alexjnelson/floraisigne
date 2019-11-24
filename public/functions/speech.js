@@ -12,6 +12,7 @@ function record() {
         
         generateWord(word=wordrecognized);
         
+        var 
     }
 
     recognition.start();
